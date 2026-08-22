@@ -1328,3 +1328,173 @@ input:focus, select:focus, textarea:focus {
   padding-top: 14px;
   border-top: 1px solid #f1f5f9;
 }
+
+/* =========================================================
+   Responsive Media Queries (Mobile, Tablet, Desktop)
+   ========================================================= */
+@media (max-width: 992px) {
+  .navbar-container {
+    padding: 10px 16px;
+    flex-wrap: wrap;
+  }
+}
+
+@media (max-width: 768px) {
+  .container {
+    padding: 14px 10px;
+    max-width: 100%;
+  }
+
+  .card {
+    padding: 18px 14px;
+    border-radius: 12px;
+  }
+
+  .heading {
+    font-size: 20px;
+  }
+
+  .navbar-container {
+    flex-direction: column;
+    align-items: stretch;
+    gap: 12px;
+    padding: 12px 14px;
+  }
+
+  .navbar-brand {
+    justify-content: center;
+  }
+
+  .navbar-links {
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 6px;
+    width: 100%;
+  }
+
+  .nav-link {
+    font-size: 13px;
+    padding: 6px 12px;
+  }
+
+  .navbar-user {
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 8px;
+    padding-top: 8px;
+    border-top: 1px solid rgba(255, 255, 255, 0.1);
+  }
+
+  .grid {
+    grid-template-columns: 1fr;
+    gap: 14px;
+  }
+
+  .period-badge-wrap {
+    flex-wrap: wrap;
+    width: 100%;
+  }
+
+  .period-input {
+    max-width: 100%;
+    width: 100%;
+  }
+
+  .stats-grid {
+    grid-template-columns: 1fr;
+    gap: 12px;
+  }
+
+  .results-header {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 8px;
+  }
+
+  .rate-info-box {
+    width: 100%;
+    justify-content: space-between;
+  }
+
+  .results-summary {
+    flex-direction: column;
+    align-items: stretch;
+    gap: 14px;
+    text-align: center;
+  }
+
+  .grand-total-card {
+    text-align: center;
+  }
+
+  .calculator-actions,
+  .result-buttons {
+    flex-direction: column;
+    width: 100%;
+  }
+
+  .calculator-actions .btn,
+  .result-buttons .btn {
+    width: 100%;
+  }
+
+  .table-responsive {
+    width: 100%;
+    overflow-x: auto;
+    -webkit-overflow-scrolling: touch;
+  }
+
+  .table {
+    min-width: 540px;
+  }
+
+  .meter-overview-grid {
+    grid-template-columns: repeat(2, 1fr) !important;
+  }
+
+  .invoice-header-flex {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 12px;
+  }
+}
+
+@media (max-width: 480px) {
+  .container {
+    padding: 10px 6px;
+  }
+
+  .card {
+    padding: 14px 10px;
+  }
+
+  .heading {
+    font-size: 18px;
+  }
+
+  .meter-overview-grid {
+    grid-template-columns: 1fr !important;
+  }
+
+  .search-input {
+    font-size: 13px;
+    padding: 8px 12px 8px 36px;
+  }
+
+  .modal-content {
+    padding: 18px 14px;
+    margin: 8px;
+    width: calc(100% - 16px);
+  }
+
+  .user-badge {
+    padding: 4px 8px;
+    font-size: 12px;
+  }
+
+  .nav-action-btn,
+  .logout-btn {
+    padding: 5px 8px;
+    font-size: 12px;
+  }
+}
