@@ -731,6 +731,67 @@ input:focus, select:focus, textarea:focus {
 }
 
 /* =========================================================
+   Server Wakeup / Status Pill
+   ========================================================= */
+.server-warmup-wrap {
+  display: flex;
+  justify-content: center;
+  margin-top: 14px;
+}
+
+.server-pill {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  padding: 5px 14px;
+  border-radius: 20px;
+  font-size: 12px;
+  font-weight: 600;
+  transition: all 0.3s ease;
+}
+
+.server-ready {
+  background: #ecfdf5;
+  color: #065f46;
+  border: 1px solid #a7f3d0;
+}
+
+.server-waking {
+  background: #fffbeb;
+  color: #92400e;
+  border: 1px solid #fde68a;
+  animation: subtlePulse 2s infinite ease-in-out;
+}
+
+@keyframes subtlePulse {
+  0%, 100% { opacity: 0.9; transform: scale(1); }
+  50% { opacity: 1; transform: scale(1.02); }
+}
+
+.pulse-dot {
+  width: 8px;
+  height: 8px;
+  border-radius: 50%;
+  display: inline-block;
+}
+
+.green-dot {
+  background: #10b981;
+  box-shadow: 0 0 0 2px rgba(16, 185, 129, 0.3);
+}
+
+.yellow-dot {
+  background: #f59e0b;
+  box-shadow: 0 0 0 2px rgba(245, 158, 11, 0.3);
+  animation: dotFlash 1.2s infinite alternate;
+}
+
+@keyframes dotFlash {
+  from { opacity: 0.4; }
+  to { opacity: 1; }
+}
+
+/* =========================================================
    Records Page & Stats
    ========================================================= */
 .stats-grid {

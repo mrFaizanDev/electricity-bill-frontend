@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useEffect } from 'react';
 import {
   BrowserRouter as Router,
   Routes,
@@ -13,6 +13,7 @@ import CalculatorPage from './pages/CalculatorPage';
 import RecordsPage from './pages/RecordsPage';
 import RecordDetailPage from './pages/RecordDetailPage';
 import UserManagementPage from './pages/UserManagementPage';
+import api from './api/api';
 import './App.css';
 
 // Main Layout with persistent Navbar when authenticated
@@ -47,6 +48,11 @@ function RootRedirect() {
 }
 
 export default function App() {
+  useEffect(() => {
+    // Fire light health check ping on app launch to wake up Render backend if sleeping
+    api.health().catch(() => {});
+  }, []);
+
   return (
     <AuthProvider>
       <Router>
